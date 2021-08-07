@@ -22,6 +22,8 @@
 
   $:checkInputsValueLength = titlelen !== 0 && titlelen <= 30 && contentlen !== 0 && contentlen <= 60 && authorlen !== 0 && authorlen <= 10
 
+  let openCreateVisible = true
+
 </script>
 
 <style>
@@ -36,7 +38,7 @@
     padding: 1.2rem 1.4rem;
     border-radius: 16px;
 
-    background-color: rgba(20,100,100,.2);
+    background-color: rgb(227, 227, 227);
 
     display: flex;
     flex-direction: column;
@@ -85,7 +87,7 @@
   <label for="openCreate" class="bt-openCreate">
     <i class="far fa-plus-square" />
   </label>
-  <input type="checkbox" id="openCreate" checked={true}/>
+  <input type="checkbox" id="openCreate" bind:checked={openCreateVisible}/>
   <form on:submit|preventDefault={createNote}>
     <InputText on:titleValueLength={(e) => title = e.detail} args={{for:"title",initialValue:title,maxChars:30,placeholder:"Enter the book's title",required:true}}/>
     <InputText on:contentValueLength={(e) => content = e.detail} args={{for:"content",initialValue:content,maxChars:60,placeholder:"Enter the note's content",required:true}}/>
