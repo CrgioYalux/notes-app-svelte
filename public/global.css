@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--front-color-primary: #ccc040;
+	--back-color-primary: rgba(0, 50, 0, 0.6);
+
+	--red-600: #dc2626;
+	--red-400: #f87171;
+	--red-800: #991b1b;
+	--gray-400: #9ca3af;
+	--gray-600: #4b5563;
+	--gray-800: #1f2937;
+	--green-400: #34d399;
+	--green-600: #059669;
+	--green-800: #065f46;
+	--ind-400: #818cf8;
+	--ind-600: #4f46e5;
+	--ind-800: #3730a3;
+	--ind-700: #4338ca;
+}
+
+body {
+	min-height: 100vh;
+	padding: 10px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
